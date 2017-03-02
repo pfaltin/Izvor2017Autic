@@ -1,14 +1,14 @@
 
 #include <NewPing.h>
 
-#define MAX_DISTANCE 100 
-NewPing sonar1(12, 11, MAX_DISTANCE); 
-NewPing sonar2(10, 9, MAX_DISTANCE); 
+#define MAX_DISTANCE 100 // najveća mjerena udaljenost 
+NewPing sonar1(12, 11, MAX_DISTANCE); // trig, echo, dist
+NewPing sonar2(10, 9, MAX_DISTANCE); // trig, echo, dist
 int udaljenost1, udaljenost2;
 
 
 void setup() {
-  Serial.begin(9600); //
+  Serial.begin(9600);
     pinMode(6, OUTPUT);
     pinMode(5, OUTPUT);
     pinMode(4, OUTPUT);
@@ -30,10 +30,10 @@ if (udaljenost1 < 7) {
      else{
      digitalWrite(3, LOW);
      } 
-  Serial.print(udaljenost1); // Send ping, get distance in cm and print result (0 = outside set distance range)
+  Serial.print(udaljenost1); // 
   Serial.print("cm");
   
-    delay(50);  // Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between pings.
+    delay(50);  // 
   
   Serial.print("\tPing2: ");
   udaljenost2=sonar2.ping_cm();
@@ -49,8 +49,8 @@ if (udaljenost2 < 7) {
      else{
      digitalWrite(5, LOW);
      } 
-  Serial.print(udaljenost2); // Send ping, get distance in cm and print result (0 = outside set distance range)
+  Serial.print(udaljenost2); // 
   Serial.println("cm");
-    delay(50);  // Wait 50ms between pings (about 20 pings/sec). 29ms should be the shortest delay between pings.
+    delay(50);  // 
   
 }
