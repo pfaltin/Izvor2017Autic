@@ -4,7 +4,7 @@
 #define MAX_DISTANCE 100 // najveća mjerena udaljenost 
 NewPing sonar1(12, 11, MAX_DISTANCE); // trig, echo, dist
 NewPing sonar2(10, 9, MAX_DISTANCE); // trig, echo, dist
-int udaljenost1, udaljenost2;
+int udaljenost1, udaljenost2; //varijable za mjerenje
 
 
 void setup() {
